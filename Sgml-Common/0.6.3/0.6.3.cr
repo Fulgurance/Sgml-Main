@@ -29,12 +29,15 @@ class Target < ISM::Software
     def install
         super
 
-        runInstallCatalogCommand([  "--remove",
-                                    "/etc/sgml/sgml-ent.cat",
-                                    "/usr/share/sgml/sgml-iso-entities-8879.1986/catalog"])
-        runInstallCatalogCommand([  "--remove",
-                                    "/etc/sgml/sgml-docbook.cat",
-                                    "/etc/sgml/sgml-ent.cat"])
+        if File.exists?("#{Ism.settings.rootPath}etc/sgml/catalog")
+            runInstallCatalogCommand([  "--remove",
+                                        "/etc/sgml/sgml-ent.cat",
+                                        "/usr/share/sgml/sgml-iso-entities-8879.1986/catalog"])
+            runInstallCatalogCommand([  "--remove",
+                                        "/etc/sgml/sgml-docbook.cat",
+                                        "/etc/sgml/sgml-ent.cat"])
+        end
+
         runInstallCatalogCommand([  "--add",
                                     "/etc/sgml/sgml-ent.cat",
                                     "/usr/share/sgml/sgml-iso-entities-8879.1986/catalog"])
