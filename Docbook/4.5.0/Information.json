@@ -1,0 +1,20 @@
+{
+  "port": "Sgml-Main",
+  "name": "Docbook",
+  "version": "4.5.0",
+  "architectures": ["x86_64"],
+  "description": "Schema maintained by the DocBook Technical Committee of OASIS",
+  "website": "https://docbook.org/",
+  "downloadLinks": ["https://www.docbook.org/sgml/4.5/docbook-4.5.zip"],
+  "md5sums": ["07c581f4bbcba6d3aac85360a19f95f7"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Sgml-Common",
+      "version": "0.6.3",
+      "options": []
+    }
+  ],
+  "options": []
+}
