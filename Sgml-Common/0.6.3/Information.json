@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Tool for creating and maintaining centralized SGML catalogs",
   "website": "https://www.docbook.org/xml/",
-  "downloadLinks": ["https://sourceware.org/ftp/docbook-tools/new-trials/SOURCES/sgml-common-0.6.3.tgz"],
-  "md5sums": ["103c9828f24820df86e55e7862e28974"],
-  "patchesLinks": ["https://www.linuxfromscratch.org/patches/blfs/11.0/sgml-common-0.6.3-manpage-1.patch"],
   "installedFiles": [],
   "dependencies": [
     {
