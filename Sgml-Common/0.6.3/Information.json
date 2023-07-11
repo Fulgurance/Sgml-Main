@@ -2,7 +2,9 @@
   "port": "Sgml-Main",
   "name": "Sgml-Common",
   "version": "0.6.3",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Tool for creating and maintaining centralized SGML catalogs",
   "website": "https://www.docbook.org/xml/",
   "installedFiles": [],
