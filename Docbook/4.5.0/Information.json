@@ -2,14 +2,13 @@
   "port": "Sgml-Main",
   "name": "Docbook",
   "version": "4.5.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Schema maintained by the DocBook Technical Committee of OASIS",
   "website": "https://docbook.org/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "Sgml-Main",
       "name": "Sgml-Common",
       "version": ">=0.6.3",
       "options": []
