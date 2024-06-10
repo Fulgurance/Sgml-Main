@@ -4,21 +4,21 @@ class Target < ISM::Software
         super
 
         (0..55).each do |value|
-            fileDeleteLine("#{buildDirectoryPath(false)}/docbook.cat",58)
+            fileDeleteLine("#{buildDirectoryPath}/docbook.cat",58)
         end
 
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5")
 
-        copyFile("#{buildDirectoryPath(false)}/docbook.cat","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5/catalog")
-        copyFile(Dir["#{buildDirectoryPath(false)}/*.dtd"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5/")
-        copyFile(Dir["#{buildDirectoryPath(false)}/*.mod"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5/")
-        copyFile(Dir["#{buildDirectoryPath(false)}/*.dcl"],"#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5/")
+        copyFile("#{buildDirectoryPath}/docbook.cat","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5/catalog")
+        copyFile(Dir["#{buildDirectoryPath}/*.dtd"],"#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5/")
+        copyFile(Dir["#{buildDirectoryPath}/*.mod"],"#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5/")
+        copyFile(Dir["#{buildDirectoryPath}/*.dcl"],"#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5/")
     end
 
     def install
         super
 
-        setOwnerRecursively("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5","root","root")
+        setOwnerRecursively("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5","root","root")
 
         runInstallCatalogCommand([  "--add",
                                     "/etc/sgml/sgml-docbook-dtd-4.5.cat",
