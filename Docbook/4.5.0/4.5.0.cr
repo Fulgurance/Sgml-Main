@@ -18,7 +18,7 @@ class Target < ISM::Software
     def install
         super
 
-        setOwnerRecursively("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/sgml/docbook/sgml-dtd-4.5","root","root")
+        runChownCommand(["-R","root:root","/usr/share/sgml/docbook/sgml-dtd-4.5"])
 
         runInstallCatalogCommand([  "--add",
                                     "/etc/sgml/sgml-docbook-dtd-4.5.cat",
