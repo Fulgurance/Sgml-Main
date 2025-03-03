@@ -25,8 +25,6 @@ class Target < ISM::Software
     def install
         super
 
-        runChownCommand("-R root:root /usr/share/sgml/docbook/sgml-dtd-4.5")
-
         runInstallCatalogCommand(arguments: "--add                              \
                                             /etc/sgml/sgml-docbook-dtd-4.5.cat  \
                                             /usr/share/sgml/docbook/sgml-dtd-4.5/catalog")
