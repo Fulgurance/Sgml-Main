@@ -9,5 +9,12 @@
       "directoryMode":  "0755",
 
   },
-  "descriptors": []
+  "descriptors": [
+    {
+      "target": "/usr/share/sgml/docbook/sgml-dtd-4.5",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    }
+  ]
 }
