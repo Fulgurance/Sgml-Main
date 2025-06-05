@@ -34,4 +34,11 @@ class Target < ISM::Software
                                             /etc/sgml/sgml-docbook.cat")
     end
 
+    def deploy
+        super
+
+        runChownCommand("root:root /usr/share/sgml/docbook/sgml-dtd-4.5")
+        runChmodCommand("0755 /usr/share/sgml/docbook/sgml-dtd-4.5")
+    end
+
 end
