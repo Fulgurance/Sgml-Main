@@ -1,0 +1,19 @@
+PORT
+    Sgml-Main
+NAME
+    Docbook
+VERSION
+    4.5.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Schema maintained by the DocBook Technical Committee of OASIS
+WEBSITE
+    https://docbook.org/
+DEPENDENCIES
+        @Sgml-Main:Sgml-Common>=0.6.3
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

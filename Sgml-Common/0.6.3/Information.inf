@@ -1,0 +1,20 @@
+PORT
+    Sgml-Main
+NAME
+    Sgml-Common
+VERSION
+    0.6.3
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Tool for creating and maintaining centralized SGML catalogs
+WEBSITE
+    https://www.docbook.org/xml/
+DEPENDENCIES
+        @ProgrammingTools-Main:Autoconf>=2.72.0
+        @ProgrammingTools-Main:Automake>=1.17.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
